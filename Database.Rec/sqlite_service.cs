@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SQLite;
-using App8.Database;
+﻿using SQLite;
 
 namespace App8.Database.Rec
 {
@@ -43,6 +39,6 @@ namespace App8.Database.Rec
             await db_main();
             await db.DeleteAsync(book_o);
         }
-          
+
     }
 }
