@@ -14,31 +14,30 @@
                 Text="App8"
                 FontSize="Large"/>
 
-            
-
-            <Button
+            <Grid ColumnDefinitions="*,*"
+                  ColumnSpacing="20">
+                <Button
                 Text="cosa"
                 Clicked="OnClickedRegistrarBook"/>
 
 
-            <CollectionView
-                x:Name="BookView"
-                SelectionMode="Multiple"
-                >
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <HorizontalStackLayout Spacing="30">
-                            <Grid>
-                            </Grid>
+                <CollectionView
+                    x:Name="BookView"
+                    SelectionMode="Multiple"
+                    Background="#DDDDDD"
+                    Grid.Column="1">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <HorizontalStackLayout Spacing="30">
+                                <Grid>
+                                </Grid>
                                 <Label Text="{Binding IF_book_title}" FontAttributes="Bold"/>
                                 <Label Text="{Binding IF_book_title}" FontAttributes="Bold"/>
-
-                                
-                        </HorizontalStackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-                
-            </CollectionView>
+                            </HorizontalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 
