@@ -22,11 +22,18 @@
 
 
             <CollectionView
-                x:Name="cosa">
+                x:Name="BookView"
+                SelectionMode="Multiple"
+                >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <HorizontalStackLayout>
-                            <!--thing db-->
+                        <HorizontalStackLayout Spacing="30">
+                            <Grid>
+                            </Grid>
+                                <Label Text="{Binding IF_book_title}" FontAttributes="Bold"/>
+                                <Label Text="{Binding IF_book_title}" FontAttributes="Bold"/>
+
+                                
                         </HorizontalStackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
