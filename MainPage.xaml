@@ -15,34 +15,32 @@
                 FontSize="Large"/>
 
             <Grid ColumnDefinitions="*,*"
-                  ColumnSpacing="20">
-                <Button
-                Text="cosa"
-                Clicked="OnClickedRegistrarBook"/>
+                  ColumnSpacing="20"
+                  RowDefinitions="*,*">
 
-                <Grid>
+                <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*" ColumnSpacing="15" RowSpacing="15" Grid.Row="0" Grid.Column="0">
                     <Entry
-                        x:Name="nombreEntry"
-                        Placeholder="Nombre"
+                        x:Name="titleBookI"
+                        Placeholder="Título del libro"
                         Grid.Column="0"
                         Grid.Row="0"/>
 
                     <Entry
-                        x:Name="grupoEntry"
-                        Placeholder="Grupo"
+                        x:Name="authorBookI"
+                        Placeholder="Autor"
                         Grid.Column="0"
                         Grid.Row="1"/>
 
                     <Entry
-                        x:Name="rfcEntry"
-                        Placeholder="RFC"
+                        x:Name="editorialBookI"
+                        Placeholder="Editorial"
                         MaxLength="18"
                         Grid.Column="0"
                         Grid.Row="2"/>
 
                     <Entry
-                        x:Name="phoneEntry"
-                        Placeholder="Télefono"
+                        x:Name="unitsBookI"
+                        Placeholder="Numero de Unidades"
                         Keyboard="Numeric"
                         MaxLength="10"
                         Grid.Column="0"
@@ -50,27 +48,27 @@
 
 
                     <Button
-                Text="Guardar"
-                Clicked="OnSaveClicked"
-                Grid.Column="1"
-                Grid.Row="0"/>
+                        Text="Guardar"
+                        Clicked="OnClickedRegistrarBook"
+                        Grid.Column="1"
+                        Grid.Row="0"/>
 
                     <Button
-                Text="Borrar"
-                Clicked="OnDeleteClicked"
-                Grid.Column="1"
-                Grid.Row="1"/>
+                        Text="Borrar"
+                        Clicked="OnClickedDeleteBook"
+                        Grid.Column="1"
+                        Grid.Row="1"/>
 
                     <Button
-                Text="Modificar"
-                Clicked="OnChange"
-                Grid.Column="1"
-                Grid.Row="2"/>
+                        Text="Modificar"
+                        Clicked="OnClickedChangeBook"
+                        Grid.Column="1"
+                        Grid.Row="2"/>
                     <Label
-                x:Name="error_Mark"
-                Text=""
-                Grid.Column="1"
-                Grid.Row="3"/>
+                        x:Name="error_Mark"
+                        Text=""
+                        Grid.Column="1"
+                        Grid.Row="3"/>
                 </Grid>
 
 
@@ -78,7 +76,9 @@
                     x:Name="BookView"
                     SelectionMode="Multiple"
                     Background="#DDDDDD"
-                    Grid.Column="1">
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Grid.RowSpan="2">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <HorizontalStackLayout Spacing="30">
